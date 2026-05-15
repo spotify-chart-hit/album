@@ -61,9 +61,22 @@ await weekly.json();
 return {
 
 weekly:
-weeklyJson.latestDate
+
+weeklyJson
+?.displayChart
+?.chartMetadata
+?.dimensions
+?.latestDate
+
+||
+
+weeklyJson
+?.displayChart
+?.date
 
 };
+
+
 
 }
 
