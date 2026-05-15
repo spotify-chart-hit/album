@@ -1,1 +1,15 @@
+{
+  "name": "regional",
+  "version": "1.0.0",
+  "main": "album-americas.js",
+  "scripts": {
+    "americas": "node album-americas.js",
+    "europe": "node album-europe.js",
+    "asia": "node album-asia.js",
+    "mea": "node album-mea.js"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0"
+  }
+}
 
