@@ -2,10 +2,10 @@
   {
     "country": "CL",
     "type": "weekly",
-    "rank": 14,
-    "previousRank": 20,
+    "rank": 10,
+    "previousRank": 14,
     "peakRank": 5,
-    "appearances": 94,
+    "appearances": 95,
     "album": "MUSE",
     "artists": [
       "Jimin"
@@ -15,10 +15,10 @@
   {
     "country": "VE",
     "type": "weekly",
-    "rank": 9,
-    "previousRank": 8,
+    "rank": 8,
+    "previousRank": 9,
     "peakRank": 1,
-    "appearances": 94,
+    "appearances": 95,
     "album": "MUSE",
     "artists": [
       "Jimin"
