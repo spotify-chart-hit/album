@@ -198,6 +198,11 @@ jobs:
         with:
           node-version: 20
 
+      - name: Pull latest files
+        run: |
+          git pull origin main
+          sleep 5
+
       - name: Run Merge
         run: node merge-album.js
 
@@ -217,4 +222,3 @@ jobs:
               sleep 3
             done
           fi
-
