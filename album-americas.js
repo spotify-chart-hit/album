@@ -81,7 +81,6 @@ weeklyJson
 
 };
 
-
 }
 
 async function scrape(
@@ -219,20 +218,93 @@ hasJimin
 
 ) {
 
+const currentRank =
+
+track.chartEntryData
+?.currentRank;
+
+const previousRank =
+
+track.chartEntryData
+?.previousRank;
+
+const rankChange =
+
+previousRank
+? Math.abs(
+currentRank -
+previousRank
+)
+: 0;
+
+let direction = "=";
+let entryStatus = null;
+
+// NEW ENTRY
+if (
+
+previousRank === null
+||
+previousRank === undefined
+
+) {
+
+entryStatus =
+"NEW_ENTRY";
+
+}
+
+// RE-ENTRY
+else if (
+
+rankChange >= 100
+
+) {
+
+entryStatus =
+"RE_ENTRY";
+
+}
+
+// NORMAL MOVEMENT
+else {
+
+if (
+
+currentRank <
+previousRank
+
+) {
+
+direction =
+"up";
+
+}
+
+else if (
+
+currentRank >
+previousRank
+
+) {
+
+direction =
+"down";
+
+}
+
+}
+
 results.push({
 
 country,
 type,
 
 rank:
-
-track.chartEntryData
-?.currentRank,
+currentRank,
 
 previousRank:
-
-track.chartEntryData
-?.previousRank,
+previousRank,
 
 peakRank:
 
@@ -258,7 +330,11 @@ a => a.name
 image:
 
 track.albumMetadata
-?.displayImageUri
+?.displayImageUri,
+
+rankChange,
+direction,
+entryStatus
 
 });
 
@@ -423,4 +499,3 @@ console.log(
 }
 
 start();
-
