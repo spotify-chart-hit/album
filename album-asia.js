@@ -247,36 +247,7 @@ previousRank
 : 0;
 
 let direction = "=";
-let entryStatus = null;
 
-// NEW ENTRY
-if (
-
-previousRank === null
-||
-previousRank === undefined
-
-) {
-
-entryStatus =
-"NEW_ENTRY";
-
-}
-
-// RE-ENTRY
-else if (
-
-rankChange >= 100
-
-) {
-
-entryStatus =
-"RE_ENTRY";
-
-}
-
-// NORMAL MOVEMENT
-else {
 
 if (
 
@@ -299,8 +270,6 @@ previousRank
 
 direction =
 "down";
-
-}
 
 }
 
@@ -343,7 +312,10 @@ track.albumMetadata
 
 rankChange,
 direction,
-entryStatus
+
+entryStatus:
+track.chartEntryData
+?.entryStatus
 
 });
 
