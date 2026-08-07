@@ -5,7 +5,7 @@
     "rank": 1,
     "previousRank": 1,
     "peakRank": 1,
-    "appearances": 105,
+    "appearances": 107,
     "album": "MUSE",
     "artists": [
       "Jimin"
@@ -18,17 +18,17 @@
   {
     "country": "UA",
     "type": "weekly",
-    "rank": 198,
-    "previousRank": -1,
+    "rank": 197,
+    "previousRank": 200,
     "peakRank": 9,
-    "appearances": 104,
+    "appearances": 106,
     "album": "MUSE",
     "artists": [
       "Jimin"
     ],
     "image": "https://i.scdn.co/image/ab67616d00001e02f02c451189a709b9a952aaec",
-    "rankChange": 199,
-    "direction": "down",
-    "entryStatus": "RE_ENTRY"
+    "rankChange": 3,
+    "direction": "up",
+    "entryStatus": "MOVED_UP"
   }
 ]
